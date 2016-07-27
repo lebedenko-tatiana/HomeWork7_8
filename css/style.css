@@ -55,9 +55,14 @@ header {
   font-size: 24px;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
   text-align: center;
   border-bottom: 2px solid #edbfff;
+}
+
+.menu__link:hover {
+  filter: Shadow(Color=#a3a3a3, Direction=135, Strength=2)
+          Shadow(Color=#a3a3a3, Direction=315, Strength=2);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
 .menu__item:first-child {
@@ -65,20 +70,11 @@ header {
 }
 
 .menu__hr {
-  border: none;
-  width: 47px;
-  height: 2px;
-  background: #edbfff;
-  line-height: 2px;
-  margin: 5px auto 0;
-}
-
-.menu__sub {
   display: none;
 }
 
 .slider {
-  margin: 122px auto 80px;
+  margin: 122px auto 75px;
   width: 320px; 
   position: relative;
 }
@@ -102,6 +98,7 @@ header {
   font-family: 'League Gothic', Arial;
   color: #fff;
   font-size: 36px;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -112,6 +109,7 @@ header {
   color: #edbfff;
   font-size: 20px;
   line-height: 23px;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   width: 205px;
   height: 23px;
@@ -128,20 +126,24 @@ header {
 
 .switch {
   display: block;
-  width: 84px;
-  margin: 30px auto 0;
-  padding-left: 8px;
+  width: 120px;
+  margin: 25px auto 0;
 }
 
 .switch__radio {
-  display: none;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .switch__label {
   display: inline-block;
   cursor: pointer;
+  margin-right: 5px;
   position: relative;
-  margin-right: 18px;
 }
 
 .switch__label:before {
@@ -149,15 +151,15 @@ header {
   display: inline-block;
   width: 18px;
   height: 18px;
-  margin-right: 10px;
+  margin-right: 5px;
   position: absolute;
   left: 0;
   bottom: 1px;
-  background: url(../img/sprite_radio.png) no-repeat 0 0;
+  background: rgba(0, 0, 0, 0) url(../img/sprite_radio.png) no-repeat 0 0;
 }
 
 .label-light:before {
-  background: url(../img/sprite_radio.png) no-repeat -36px 0;
+  background: rgba(0, 0, 0, 0) url(../img/sprite_radio.png) no-repeat -36px 0;
 } 
 
 .switch__radio:checked + .switch__label:before {
@@ -169,6 +171,8 @@ header {
 }
 
 aside {
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#745083', endColorstr='#322539');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#745083, endColorstr=#322539)";  
   background: linear-gradient(#745083, #322539);
   background-size: cover;
   border-top: 1px solid #33253a;
@@ -198,6 +202,7 @@ aside {
   font-family: 'League Gothic', Arial;
   color: #fff;
   font-size: 24px;
+  filter: Shadow(Color=#333333, Direction=135, Strength=1);
   text-shadow: 1px 1px 0 #0f1518;
 }
 
@@ -210,6 +215,7 @@ aside {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
+  filter: Shadow(Color=#333333, Direction=135, Strength=1);
   text-shadow: 1px 1px 0 #0f1518; 
   overflow: hidden;
 }
@@ -231,6 +237,8 @@ aside {
 }
 
 .aside__link:hover {
+  filter: Shadow(Color=#a3a3a3, Direction=135, Strength=2)
+          Shadow(Color=#a3a3a3, Direction=315, Strength=2);
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); 
 }
 
@@ -246,6 +254,9 @@ main {
   height: 272px;
   margin-left: 41px;
   background: #fff;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=145, Strength=1)
+          progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=190, Strength=2);
+          progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=235, Strength=2);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
   position: relative;
  
@@ -434,6 +445,7 @@ main {
 }
 
 .logos a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
   opacity: 0.4;
 }
 
@@ -457,9 +469,10 @@ footer {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
+  filter: Shadow(Color=#939393, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); 
   padding-top: 42px;
-  width: 142px;
+  width: 145px;
 }
 
 
@@ -476,6 +489,7 @@ footer {
 .block__width {
   width: 480px;
   margin: 0 auto;
+  position: relative;
 }
 
 header {
@@ -494,64 +508,41 @@ header {
   margin-left: 164px;
 }
 
-.menu {
-  margin: 43px auto 0;
-  height: 48px; 
-  width: 47px; 
-  text-align: center;
-  position: relative;
-}
-
-.menu__item {
-  display: none;
-  list-style: none;
-}
-
-.menu__link {
-  font-family: 'League Gothic', Arial;
-  font-size: 24px;
-  color: #fff;
-  text-decoration: none;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-  text-align: center;
-  border-bottom: 2px solid #edbfff;
-}
-
-.menu__item:first-child {
-  display: block;
-}
-
-.subhr {
+.menu__hr {
   border: none;
   width: 47px;
   height: 2px;
   background: #edbfff;
   line-height: 2px;
-  margin: -5px auto 0;
+  margin: -3px auto 0;
 }
 
-.menu__sub {
-  display: none;
+.menu {
+  display: block;
   width: 245px; 
-  padding: 0;
   text-align: center;
   border: 1px solid #051116;
+  behavior: url(pie/pie.htc);
   border-radius: 10px;
+  behavior: url(pie/pie.htc);
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#b0b0b0', Direction=145, Strength=2);
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#3e3048', endColorstr='#3e3048');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#3e3048, endColorstr=#3e3048)";  
   background: rgba(54, 41, 62, 0.9);
   overflow: hidden;
   position: absolute; 
   z-index: 1;
-  top: -22px;
-  left: -100px;
+  top: 61px;
+  left: 116px;
 }
 
-.menu__subitem {
+.menu__item {
   list-style: none;
   border-bottom: 1px solid #35273d;
 }
 
-.menu__sublink {
+.menu__link {
   display: block;
   height: 39px;
   text-decoration: none;
@@ -565,22 +556,21 @@ header {
   box-shadow: inset 0 1px 0 1px rgba(105, 82, 114, 0.59);
 }
 
-.menu__subitem:first-child .menu__sublink {
+.menu__item:first-child .menu__link {
   height: 45px;
+  line-height: 45px;
 }
 
-.menu__sublink:hover {
+.menu__link:hover {
   border: none;
   border-bottom: 2px solid #edbfff;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#241c2a', endColorstr='#241c2a');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#241c2a, endColorstr=#241c2a)";  
   background: rgba(43, 34, 49, 0.5);
 }
 
-.menu__item:hover > .menu__sub {
-  display: block;
-}
-
 .stripe {
-  margin: 2px auto 26px;
+  margin: 92px auto 22px;
   background: rgba(0, 0, 0, 0.2);
   background-size: cover;
   padding-bottom: 95px;
@@ -615,6 +605,7 @@ header {
   font-family: 'League Gothic', Arial;
   color: #fff;
   font-size: 36px;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -627,6 +618,7 @@ header {
   font-family: 'League Gothic', Arial;
   color: #edbfff;
   font-size: 19px;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
@@ -645,19 +637,24 @@ header {
 }
 
 .switch {
-  width: 84px;
+  width: 120px;
   margin: 0 auto;
 }
 
 .switch__radio {
-  display: none;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .switch__label {
   display: inline-block;
   cursor: pointer;
+  margin-right: 5px;
   position: relative;
-  margin-right: 18px;
 }
 
 .switch__label:before {
@@ -665,15 +662,15 @@ header {
   display: inline-block;
   width: 18px;
   height: 18px;
-  margin-right: 10px;
+  margin-right: 5px;
   position: absolute;
   left: 0;
   bottom: 1px;
-  background: url(../img/sprite_radio.png) no-repeat 0 0;
+  background: rgba(0, 0, 0, 0) url(../img/sprite_radio.png) no-repeat 0 0;
 }
 
 .label-light:before {
-  background: url(../img/sprite_radio.png) no-repeat -36px 0;
+  background:  rgba(0, 0, 0, 0) url(../img/sprite_radio.png) no-repeat -36px 0;
 } 
 
 .switch__radio:checked + .switch__label:before {
@@ -685,6 +682,8 @@ header {
 }
 
 aside {
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#745083', endColorstr='#322539');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#745083, endColorstr=#322539)";  
   background: linear-gradient(#745083, #322539);
   background-size: cover;
   height: 520px;
@@ -715,6 +714,7 @@ aside {
   font-family: 'League Gothic', Arial;
   color: #fff;
   font-size: 24px;
+  filter: Shadow(Color=#333333, Direction=135, Strength=1);
   text-shadow: 1px 1px 0 #0f1518;
 }
 
@@ -726,7 +726,6 @@ aside {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
-  text-shadow: 1px 1px 0 #0f1518; 
   overflow: hidden;
 }
 
@@ -742,6 +741,8 @@ aside {
 }
 
 .aside__link:hover {
+  filter: Shadow(Color=#a3a3a3, Direction=135, Strength=2)
+          Shadow(Color=#a3a3a3, Direction=315, Strength=2);
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); 
 }
 
@@ -764,10 +765,13 @@ main {
 
 .welc {
   background: #fff;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=145, Strength=1)
+          progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=190, Strength=2);
+          progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=235, Strength=2);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
   position: relative;
   padding-bottom: 35px;
-  margin-bottom: 28px;
+  margin-bottom: 23px;
 }
 
 .welc__ava {
@@ -816,7 +820,7 @@ main {
 }
 
 .updates__item {
-  margin-top: 15px;
+  margin-top: 16px;
   margin-left: 23px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -936,6 +940,7 @@ main {
 }
 
 .logos a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
   opacity: 0.4;
 }
 
@@ -986,36 +991,61 @@ article {
 footer {
   background: url("../img/bkg_footer.png") ;
   background-size: cover;
-  padding-top: 3px;
-  padding-bottom: 57px;
+  padding-top: 34px;
+  padding-bottom: 86px;
 }
 
 .onfooter {
   display: block;
-  width: 460px;
-  margin-left: 16px;
+  width: initial;
+  margin-left: 0;
+  padding-left: 0;
+  background: none;
+  position: static;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .onfooter .menu__item {
   display: inline-block;
+  border: none;
 }
 
 .onfooter .menu__link {
-  margin-right: 20px; 
+  height: 32px;
+  margin-left: 21px; 
   font-size: 20px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); 
-  border: none;
+  border-bottom: 2px solid transparent;
+  box-shadow: none;
+}
+
+.onfooter .menu__link:hover {
+  background: none;
+  border-bottom: 2px solid #edbfff;
+}
+
+.onfooter .menu__hr {
+  display: none;
+}
+
+.onfooter .menu__item:first-child .menu__link {
+  height: 35px;  
+  margin-left: 0;
 }
 
 .design {
   display: block;
-  margin: 9px auto;
+  margin: 32px auto 0;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
+  filter: Shadow(Color=#939393, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); 
-  width: 138px;
+  width: 145px;
 }
+
 
 
 }
@@ -1032,7 +1062,7 @@ header {
   background: url("../img/bkg_header.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 71px;
-  padding-bottom: 112px;
+  padding-bottom: 117px;
 }
 
 .block__width {
@@ -1070,11 +1100,12 @@ header {
   font-size: 24px;
   color: #fff;
   text-decoration: none;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
-.subhr {
+.menu__hr {
   display: none;
 }
 
@@ -1083,7 +1114,7 @@ header {
 }
 
 .stripe {
-  margin: 71px auto 43px;
+  margin: 71px auto 38px;
   background: rgba(0, 0, 0, 0.2);
   background-size: cover;
  }
@@ -1119,6 +1150,7 @@ header {
   font-family: 'League Gothic', Arial;
   color: #fff;
   font-size: 48px;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -1128,6 +1160,7 @@ header {
   color: #edbfff;
   font-size: 24px;
   line-height: 37px;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   width: 250px;
   height: 37px;
@@ -1142,6 +1175,7 @@ header {
   overflow: hidden;
   color: #fff;
   font-size: 16px;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   font-family: 'Open Sans', sans-serif;
 }
@@ -1156,20 +1190,25 @@ header {
 }
 
 .switch {
-  width: 84px;
+  width: 120px;
   margin-right: 143px;
   float: right;
 }
 
 .switch__radio {
-  display: none;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .switch__label {
   display: inline-block;
   cursor: pointer;
+  margin-right: 5px;
   position: relative;
-  margin-right: 18px;
 }
 
 .switch__label:before {
@@ -1177,15 +1216,15 @@ header {
   display: inline-block;
   width: 18px;
   height: 18px;
-  margin-right: 10px;
+  margin-right: 5px;
   position: absolute;
   left: 0;
   bottom: 1px;
-  background: url(../img/sprite_radio.png) no-repeat 0 0;
+  background: rgba(0, 0, 0, 0) url(../img/sprite_radio.png) no-repeat 0 0;
 }
 
 .label-light:before {
-  background: url(../img/sprite_radio.png) no-repeat -36px 0;
+  background: rgba(0, 0, 0, 0) url(../img/sprite_radio.png) no-repeat -36px 0;
 } 
 
 .switch__radio:checked + .switch__label:before {
@@ -1197,6 +1236,8 @@ header {
 }
 
 aside {
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#745083', endColorstr='#322539');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#745083, endColorstr=#322539)";    
   background: linear-gradient(#745083, #322539);
   background-size: cover;
   border-top: 1px solid #33253a;
@@ -1226,6 +1267,7 @@ aside {
   font-family: 'League Gothic', Arial;
   color: #fff;
   font-size: 24px;
+  filter: Shadow(Color=#333333, Direction=135, Strength=1);
   text-shadow: 1px 1px 0 #0f1518;
 }
 
@@ -1238,6 +1280,7 @@ aside {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
+  filter: Shadow(Color=#333333, Direction=135, Strength=1);
   text-shadow: 1px 1px 0 #0f1518; 
   overflow: hidden;
 }
@@ -1255,6 +1298,8 @@ aside {
 }
 
 .aside__link:hover {
+  filter: Shadow(Color=#a3a3a3, Direction=135, Strength=2)
+          Shadow(Color=#a3a3a3, Direction=315, Strength=2);
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); 
 }
 
@@ -1281,10 +1326,13 @@ main {
 
 .welc {
   margin-left: 40px;
-  margin-bottom: 28px;
+  margin-bottom: 23px;
   width: 313px;
   height: 272px;
   background: #fff;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=145, Strength=1)
+          progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=190, Strength=2);
+          progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=235, Strength=2);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
   position: relative;
  }
@@ -1365,9 +1413,8 @@ main {
 .updates-more {
   display: block;
   text-decoration: none;
-  margin-top: 16px;
+  margin-top: 19px;
   margin-right: 26px;
-
   text-align: right;
   font-family: 'League Gothic', Arial;
   color: #454545;
@@ -1461,6 +1508,7 @@ main {
 }
 
 .logos a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
   opacity: 0.4;
 }
 
@@ -1531,6 +1579,7 @@ footer {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
+  filter: Shadow(Color=#939393, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); 
 }
 
@@ -1550,7 +1599,7 @@ header {
   background: url("../img/bkg_header.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 75px;
 }
 
 .block__width {
@@ -1577,7 +1626,7 @@ nav {
   margin-left: 16px;
 }
 
-.subhr {
+.menu__hr {
   display: none;
 }
 
@@ -1602,16 +1651,12 @@ nav {
   padding-right: 0;
 }
 
-.menu__sub {
-  display: none;
-}
-
 .menu__link:hover {
   border-bottom: 2px solid #edbfff;
 }
 
 .stripe {
-  margin: 165px auto 99px;
+  margin: 165px auto 94px;
   background: rgba(0, 0, 0, 0.2);
   background-size: cover;
  }
@@ -1638,6 +1683,7 @@ nav {
   font-family: 'League Gothic', Arial;
   color: #fff;
   font-size: 59px;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -1647,6 +1693,7 @@ nav {
   color: #edbfff;
   font-size: 30px;
   line-height: 32px;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -1658,6 +1705,7 @@ nav {
   overflow: hidden;
   color: #fff;
   font-size: 19px;
+  filter: Shadow(Color=#474747, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   font-family: 'Open Sans', sans-serif;
 }
@@ -1670,20 +1718,25 @@ nav {
 }
 
 .switch {
-  width: 84px;
+  width: 120px;
   margin-right: 166px;
   float: right;
 }
 
 .switch__radio {
-  display: none;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .switch__label {
   display: inline-block;
   cursor: pointer;
+  margin-right: 5px;
   position: relative;
-  margin-right: 18px;
 }
 
 .switch__label:before {
@@ -1691,15 +1744,15 @@ nav {
   display: inline-block;
   width: 18px;
   height: 18px;
-  margin-right: 10px;
+  margin-right: 5px;
   position: absolute;
   left: 0;
   bottom: 1px;
-  background: url(../img/sprite_radio.png) no-repeat 0 0;
+  background: rgba(0, 0, 0, 0) url(../img/sprite_radio.png) no-repeat 0 0;
 }
 
 .label-light:before {
-  background: url(../img/sprite_radio.png) no-repeat -36px 0;
+  background: rgba(0, 0, 0, 0) url(../img/sprite_radio.png) no-repeat -36px 0;
 } 
 
 .switch__radio:checked + .switch__label:before {
@@ -1711,6 +1764,8 @@ nav {
 }
 
 aside {
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#745083', endColorstr='#322539');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#745083, endColorstr=#322539)";  
   background: linear-gradient(#745083, #322539);
   background-size: cover;
   border-top: 1px solid #33253a;
@@ -1753,6 +1808,7 @@ aside {
   font-family: 'League Gothic', Arial;
   color: #fff;
   font-size: 29px;
+  filter: Shadow(Color=#333333, Direction=135, Strength=1);
   text-shadow: 1px 1px 0 #0f1518;
 }
 
@@ -1764,6 +1820,7 @@ aside {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
+  filter: Shadow(Color=#333333, Direction=135, Strength=1);
   text-shadow: 1px 1px 0 #0f1518; 
   overflow: hidden;
 }
@@ -1785,6 +1842,8 @@ aside {
 }
 
 .aside__link:hover {
+  filter: Shadow(Color=#a3a3a3, Direction=135, Strength=2)
+          Shadow(Color=#a3a3a3, Direction=315, Strength=2);
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); 
 }
 
@@ -1802,9 +1861,12 @@ main {
 
 .welc {
   margin-left: 23px;
-  margin-bottom: 28px;
+  margin-bottom: 23px;
   width: 427px;
   background: #fff;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=145, Strength=1)
+          progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=190, Strength=2)
+          progid:DXImageTransform.Microsoft.Shadow(color='#efefef', Direction=235, Strength=2);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
   position: relative;
   padding-bottom: 35px;
@@ -1902,7 +1964,7 @@ main {
 .updates-more {
   display: block;
   text-decoration: none;
-  margin-top: 18px;
+  margin-top: 21px;
   margin-right: 10px;
   text-align: right;
   font-family: 'League Gothic', Arial;
@@ -1987,6 +2049,7 @@ main {
 }
 
 .logos a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
   opacity: 0.4;
 }
 
@@ -2070,7 +2133,7 @@ footer {
   background: url("../img/bkg_footer.png") ;
   background-size: cover;
   padding-top: 46px;
-  padding-bottom: 29px;
+  padding-bottom: 26px;
 }
 
 .onfooter {
@@ -2091,6 +2154,7 @@ footer {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
+  filter: Shadow(Color=#939393, Direction=135, Strength=2);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); 
 }
 
